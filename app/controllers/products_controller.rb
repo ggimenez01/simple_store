@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     # Code to load all products into an instance variable
-    @products = Product.all
+    @products = Product.includes(:category).all
   end
 
   def show
