@@ -38,9 +38,9 @@ product_data.each_with_index do |product, index|
   category = categories[index % categories.length]
   Product.create(
     title: product[:title],
+    description: product[:description],
     price: product[:price],
     stock_quantity: product[:stock_quantity],
-    description: product[:description],
     category: category
   )
 end
